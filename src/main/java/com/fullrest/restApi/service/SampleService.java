@@ -11,12 +11,8 @@ import com.fullrest.restApi.entity.SampleEntity;
 @Component
 public class SampleService {
 
-	private final SampleDao dao;
-
-	 @Autowired
-	 public SampleService(SampleDao dao) {
-		 this.dao = dao;
-		 }
+	@Autowired
+	private SampleDao dao;
 
 	public List<SampleEntity> getAll(){
 		return dao.selectAll();
